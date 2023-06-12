@@ -110,6 +110,12 @@ return packer.startup(function(use)
 	-- multicursor
 	use({ "mg979/vim-visual-multi", branch = "master" })
 
+	-- wakatime
+	use("wakatime/vim-wakatime")
+
+	-- github copilot
+	use("github/copilot.vim")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

@@ -33,7 +33,7 @@ return packer.startup(function(use)
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+	use("lunarvim/synthwave84.nvim") -- preferred colorscheme
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
@@ -115,6 +115,11 @@ return packer.startup(function(use)
 
 	-- github copilot
 	use("github/copilot.vim")
+
+	-- todo highlight
+	use({ "folke/todo-comments.nvim", requires = {
+		{ "nvim-lua/plenary.nvim" },
+	} })
 
 	if packer_bootstrap then
 		require("packer").sync()

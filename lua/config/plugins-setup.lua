@@ -121,6 +121,9 @@ return packer.startup(function(use)
 		{ "nvim-lua/plenary.nvim" },
 	} })
 
+	-- indent lines
+	use({ "nathanaelkane/vim-indent-guides" })
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

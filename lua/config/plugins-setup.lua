@@ -124,6 +124,9 @@ return packer.startup(function(use)
 	-- indent lines
 	use({ "nathanaelkane/vim-indent-guides" })
 
+	-- graph visualization
+	use({ "liuchengxu/graphviz.vim" })
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

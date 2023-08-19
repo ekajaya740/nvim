@@ -1,0 +1,16 @@
+{
+  "colors.enable": true,
+  "codeLens.enable": true,
+  "codeLens.position": "eol",
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "coc.preferences.enableMessageDialog": true,
+  "coc.preferences.formatOnSave": true,
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.willSaveHandlerTimeout": 1000,
+  "coc.preferences.useQuickfixForLocations": true,
+  "coc.preferences.enableLinkedEditing": true,
+  "coc.source.file.ignoreHidden": false,
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true,
+  "eslint.autoFixOnSave": true
+}

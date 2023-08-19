@@ -129,6 +129,9 @@ return packer.startup(function(use)
 	-- graph visualization
 	use({ "liuchengxu/graphviz.vim" })
 
+  -- run mobile emulator
+  use({"dimaportenko/telescope-simulators.nvim"})
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end

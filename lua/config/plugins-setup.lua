@@ -43,7 +43,7 @@ return packer.startup(function(use)
   use("tpope/vim-surround")               -- add, delete, change surroundings (it's awesome)
   use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 
-  -- commenting with gc
+  -- commenting plugin
   use("numToStr/Comment.nvim")
 
   -- file explorer
@@ -106,6 +106,9 @@ return packer.startup(function(use)
       local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
       ts_update()
     end,
+    requires = {
+      { "JoosepAlviste/nvim-ts-context-commentstring" }
+    }
   })
 
   -- auto closing
@@ -137,6 +140,12 @@ return packer.startup(function(use)
 
   -- graph visualization
   use({ "liuchengxu/graphviz.vim" })
+
+  -- OmniSharp for C#
+  use({ "OmniSharp/omnisharp-vim" })
+
+  -- API Testing
+  use({ "rest-nvim/rest.nvim", requires = { "nvim-lua/plenary.nvim" } })
 
   if packer_bootstrap then
     require("packer").sync()

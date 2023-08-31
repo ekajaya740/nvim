@@ -21,5 +21,7 @@
     "javascriptreact": "html",
     "typescriptreact": "html"
   },
-  "tailwindCSS.headwind.runOnSave": true
+  "tailwindCSS.headwind.runOnSave": true,
+  "coc.source.OmniSharp.enable": true,
+  "coc.source.OmniSharp.triggerCharacters": "."
 }

@@ -3,4 +3,13 @@ if not setup then
   return
 end
 
-comment.setup()
+comment.setup({
+  toggler = {
+    line = "lc",
+    block = "bc",
+  },
+  opleader = {
+    line = "lc",
+    block = "bc",
+  },
+})

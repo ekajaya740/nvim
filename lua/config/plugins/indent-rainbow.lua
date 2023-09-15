@@ -1,8 +1,6 @@
-local setup, indents = pcall(require, "indent_blankline")
+local setup, indents = pcall(require, "indent-blankline")
 if not setup then
-	return
+  return
 end
 
-indents.setup({
-	colors = {},
-})
+indents.setup()

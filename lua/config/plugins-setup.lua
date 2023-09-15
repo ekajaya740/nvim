@@ -130,13 +130,12 @@ return packer.startup(function(use)
   -- todo highlight
   use({
     "folke/todo-comments.nvim",
-    requires = {
-      { "nvim-lua/plenary.nvim" },
-    }
+    requires = { { "nvim-lua/plenary.nvim" } }
   })
 
-  -- indent lines
-  use({ "nathanaelkane/vim-indent-guides" })
+  -- indent rainbow
+  use({ "lukas-reineke/indent-blankline.nvim", })
+
 
   -- graph visualization
   use({ "liuchengxu/graphviz.vim" })

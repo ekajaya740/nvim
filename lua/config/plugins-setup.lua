@@ -31,13 +31,13 @@ return packer.startup(function(use)
   -- packer can manage itself
   use("wbthomason/packer.nvim")
 
-  use("nvim-lua/plenary.nvim")          -- lua functions that many plugins use
+  use("nvim-lua/plenary.nvim")                  -- lua functions that many plugins use
 
-  use("catppuccin/nvim", {as = "catppuccin"})      -- preferred colorscheme
+  use("catppuccin/nvim", { as = "catppuccin" }) -- preferred colorscheme
 
-  use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
+  use("christoomey/vim-tmux-navigator")         -- tmux & split window navigation
 
-  use("szw/vim-maximizer")              -- maximizes and restores current window
+  use("szw/vim-maximizer")                      -- maximizes and restores current window
 
   -- essential plugins
   use("tpope/vim-surround")               -- add, delete, change surroundings (it's awesome)
@@ -136,17 +136,29 @@ return packer.startup(function(use)
   -- indent rainbow
   use({ "lukas-reineke/indent-blankline.nvim", })
 
-
   -- graph visualization
   use({ "liuchengxu/graphviz.vim" })
-
-  -- OmniSharp for C#
-  use({ "OmniSharp/omnisharp-vim" })
 
   -- API Testing
   use({ "rest-nvim/rest.nvim", requires = { "nvim-lua/plenary.nvim" } })
 
-  use({ "habamax/vim-godot"})
+
+  -- Godot
+  use({ "habamax/vim-godot" })
+
+  -- Preview for Markdown
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
+  use({
+    "aurum77/live-server.nvim",
+    run = function()
+      require"live_server.util".install()
+    end,
+    cmd = { "LiveServer", "LiveServerStart", "LiveServerStop" },
+  })
 
   if packer_bootstrap then
     require("packer").sync()
